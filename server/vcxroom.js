@@ -13,8 +13,8 @@ var fs = require('fs')
 var vcxconfig = require('./vcxconfig')
 var vcxutil = require('./vcxutil')
 
-var log = require('../util/logger/logger').logger;
-var logger = log.getLogger('AppApi');
+// var log = require('../util/logger/logger').logger;
+// var logger = log.getLogger('AppApi');
 var vcxroom = {};
 
 var obj = {
@@ -65,7 +65,7 @@ vcxroom.getToken = function (details, callback) {
         'Authorization': 'Basic ' + vcxutil.getBasicAuthToken()
     };
 
-    vcxutil.connectServer(options, JSON.stringify(details), function (status,data) {
+    vcxutil.connectServer(options, JSON.stringify(details), function (status, data) {
         if (status === 'success')
             callback(status, data);
         else if (status === 'error')
@@ -81,7 +81,7 @@ vcxroom.getAllRooms = function (callback) {
     var rooms = {};
     options.path = '/v1/rooms/';
     options.method = 'GET';
-    vcxutil.connectServer(options, null, function (status,data) {
+    vcxutil.connectServer(options, null, function (status, data) {
         callback(data);
     });
 }
@@ -93,7 +93,7 @@ vcxroom.getRoom = function (roomName, callback) {
     var rooms = {};
     options.path = '/v1/rooms/' + roomName;
     options.method = 'GET';
-    vcxutil.connectServer(options, null, function (status,data) {
+    vcxutil.connectServer(options, null, function (status, data) {
         if (status === 'success')
             callback(status, data);
         else if (status === 'error')
