@@ -13,7 +13,7 @@
      "http": "^0.0.0",
     "express": "^4.16.2",
     "btoa": "^1.1.2",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
     "base-64": "^0.1.0",
     "cryptr": "^3.0.0",
     "express-session": "^1.15.6",
