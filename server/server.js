@@ -47,7 +47,7 @@ if (vcxconfig.SERViCE.listen_ssl === true) {
     server = http.createServer(app);
 }
 
-var port = normalizePort(vcxconfig.SERViCE.port);
+var port = process.env.PORT || 5000; //,normalizePort(vcxconfig.SERViCE.port);
 
 
 // Start the Service
@@ -139,7 +139,7 @@ app.get('/getAllRooms', function (req, res) {
 
 app.get('/getRoom/:roomName', function (req, res) {
     var room = req.params.roomName;
-    vcxroom.getRoom(room, function (status,data) {
+    vcxroom.getRoom(room, function (status, data) {
         res.status(200);
         res.send(data);
     });
@@ -149,7 +149,7 @@ app.get('/getRoom/:roomName', function (req, res) {
 // Route: To get Token for a Room
 
 app.post('/createToken/', function (req, res) {
-    vcxroom.getToken(req.body, function (status,data) {
+    vcxroom.getToken(req.body, function (status, data) {
         res.status(200);
         res.send(data);
     });
