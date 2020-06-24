@@ -15,7 +15,7 @@ var https = require('https');
 var path = require('path');
 
 var vcxconfig = require('./vcxconfig');
-var log = require(path.resolve('../util/logger/logger')).logger; //require('../util/logger/logger').logger;
+var log = require('./../util/logger/logger').logger; //require('../util/logger/logger').logger;
 var logger = log.getLogger('AppApi');
 var vcxutil = {};
 
