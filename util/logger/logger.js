@@ -5,20 +5,39 @@ global.config = global.config || {};
 
 global.config.logger = global.config.logger || {};
 
-var logFile = require('./log4js_configuration.json');
-
-var logJsonReplacer = function (key, value) {
-    if (key) {
-        if (typeof (value) === 'object') {
-            return '[Object]';
+log4js.configure({
+    appenders: {
+        appApi: {
+            "type": "file",
+            "filename": "logs/app.log",
+            "maxLogSize": 1048576,
+            "backups": 5,
+            "layout": {
+                "type": "pattern",
+                "pattern": "%d{ddMMyyhhmmss}::%p::%c::%m",
+                "replaceConsole": true
+            }
         }
-        return value;
-    } else {
-        return value;
-    }
-};
+    },
+    categories: { default: { appenders: ["appApi"], level: "info" } }
+});
 
-log4js.configure(logFile);
+
+
+// var logFile = require('./log4js_configuration.json');
+
+// var logJsonReplacer = function (key, value) {
+//     if (key) {
+//         if (typeof (value) === 'object') {
+//             return '[Object]';
+//         }
+//         return value;
+//     } else {
+//         return value;
+//     }
+// };
+
+// log4js.configure(logFile);
 
 exports.logger = log4js;
 
