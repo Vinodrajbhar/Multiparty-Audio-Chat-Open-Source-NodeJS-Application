@@ -5,17 +5,13 @@
       "filename": "logs/app.log",
       "maxLogSize": 1048576,
       "backups": 5,
+      "level": "INFO",
+      "category": "app/AppApi",
       "layout": {
         "type": "pattern",
         "pattern": "%d{ddMMyyhhmmss}::%p::%c::%m",
         "replaceConsole": true
       }
     }
-  ],
-  "levels": {
-    "AppApi": "INFO",
-    "Authorization": "INFO",
-    "Server": "INFO",
-    "ErrorHandling": "INFO"
-  }
+  ]
 }

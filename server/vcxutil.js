@@ -16,7 +16,7 @@ var path = require('path');
 
 var vcxconfig = require('./vcxconfig');
 var log = require('./../util/logger/logger').logger; //require('../util/logger/logger').logger;
-var logger = log.getLogger('AppApi');
+var logger = log.getLogger('app/AppApi');
 var vcxutil = {};
 
 
