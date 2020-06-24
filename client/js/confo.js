@@ -94,7 +94,7 @@ window.onload = function () {
     // Local Stream Definition
     var config = {
         audio: true,
-        video: false,
+        video: true,
         data: true,
         videoSize: [320, 180, 640, 480],
         options: options,
