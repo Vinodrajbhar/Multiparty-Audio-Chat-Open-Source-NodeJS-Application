@@ -13,8 +13,8 @@ var fs = require('fs')
 var vcxconfig = require('./vcxconfig')
 var vcxutil = require('./vcxutil')
 
-var log = require('../util/logger/logger').logger;
-var logger = log.getLogger('AppApi');
+// var log = require('../util/logger/logger').logger;
+// var logger = log.getLogger('AppApi');
 var vcxroom = {};
 
 var obj = {
