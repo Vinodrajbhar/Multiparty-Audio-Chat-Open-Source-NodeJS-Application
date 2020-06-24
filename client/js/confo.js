@@ -157,7 +157,7 @@ window.onload = function () {
             nameDiv.setAttribute('class', 'card-title');
             nameDiv.innerHTML = name;
             document.getElementById('local_video_div').appendChild(nameDiv);
-            document.getElementById('local_video_div').appendChild(controlsDiv);
+            // document.getElementById('local_video_div').appendChild(controlsDiv);
             stream.show('local_video_div', options);
         }
 
