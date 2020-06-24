@@ -16,7 +16,7 @@
 
 
 var vcxconfig = {};
-
+global.__basedir = __dirname;
 vcxconfig.pwdFilePath = "files/users.htpasswd"
 
 vcxconfig.SERViCE = {
@@ -51,8 +51,8 @@ vcxconfig.APP_ID = "";               // APP ID to access Server API
 vcxconfig.APP_KEY = "";   // APP KEY to access Server API
 
 
-
-vcxconfig.clientPath = "../client";                 // Client End Point UI Route
+console.log(__basedir);
+vcxconfig.clientPath = "client";                 // Client End Point UI Route
 
 var module = module || {};
 module.exports = vcxconfig;
