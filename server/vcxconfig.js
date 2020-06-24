@@ -25,7 +25,7 @@ vcxconfig.SERViCE = {
     path: "/v1",                                    // EnableX Server API Version Route to access
     domain: "enablex-demo.herokuapp.com",                       // Domain / Sub-Domain to host this Service
     port: "3000",                                 // Port No. of this Service
-    listen_ssl: true                               // Enable SSL. Set always to "true"
+    listen_ssl: false                               // Enable SSL. Set always to "true"
 };
 
 
