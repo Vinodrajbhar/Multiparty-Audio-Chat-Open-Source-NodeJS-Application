@@ -23,7 +23,7 @@ vcxconfig.SERViCE = {
     name: "EnableX Sample Web App",                // Name of the App
     version: "1.0.0",                               // Version
     path: "/v1",                                    // EnableX Server API Version Route to access
-    domain: "enablex-demo.herokuapp.com",                       // Domain / Sub-Domain to host this Service
+    domain: "my-app.herokuapp.com",                       // Domain / Sub-Domain to host this Service
     port: "3000",                                 // Port No. of this Service
     listen_ssl: false                               // Enable SSL. Set always to "true"
 };
@@ -43,15 +43,14 @@ vcxconfig.Certificate = {
 // Enbalex Server API Infomration
 
 vcxconfig.SERVER_API_SERVER = {
-    host: 'api-qa.enablex.io',                 // FQDN of Service
+    host: 'api.enablex.io',                 // FQDN of Service
     port: '443',                                       // PORT of Service (If specified by EnableX)
 };
 
-vcxconfig.APP_ID = "5e707188e865dc5b724b28e2";               // APP ID to access Server API
-vcxconfig.APP_KEY = "uMeVany7aPapetamy8uZyMeSuSymyeytaJaN";   // APP KEY to access Server API
+vcxconfig.APP_ID = "";               // APP ID to access Server API
+vcxconfig.APP_KEY = "";   // APP KEY to access Server API
 
 
-console.log(__basedir);
 vcxconfig.clientPath = "client";                 // Client End Point UI Route
 
 var module = module || {};
