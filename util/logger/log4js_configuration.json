@@ -1,17 +1,15 @@
 {
-  "appenders": [
-    {
-      "type": "file",
-      "filename": "logs/app.log",
-      "maxLogSize": 1048576,
-      "backups": 5,
-      "level": "INFO",
-      "category": "app/AppApi",
-      "layout": {
-        "type": "pattern",
-        "pattern": "%d{ddMMyyhhmmss}::%p::%c::%m",
-        "replaceConsole": true
-      }
+  "appenders": {
+    "type": "file",
+    "filename": "logs/app.log",
+    "maxLogSize": 1048576,
+    "backups": 5,
+    "level": "INFO",
+    "category": "app/AppApi",
+    "layout": {
+      "type": "pattern",
+      "pattern": "%d{ddMMyyhhmmss}::%p::%c::%m",
+      "replaceConsole": true
     }
-  ]
+  }
 }
