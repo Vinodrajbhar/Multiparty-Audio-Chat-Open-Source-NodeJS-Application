@@ -43,12 +43,12 @@ vcxconfig.Certificate = {
 // Enbalex Server API Infomration
 
 vcxconfig.SERVER_API_SERVER = {
-    host: 'api.enablex.io',                 // FQDN of Service
-    port: '',                                       // PORT of Service (If specified by EnableX)
+    host: 'api-qa.enablex.io',                 // FQDN of Service
+    port: '443',                                       // PORT of Service (If specified by EnableX)
 };
 
-vcxconfig.APP_ID = "";               // APP ID to access Server API
-vcxconfig.APP_KEY = "";   // APP KEY to access Server API
+vcxconfig.APP_ID = "5e707188e865dc5b724b28e2";               // APP ID to access Server API
+vcxconfig.APP_KEY = "uMeVany7aPapetamy8uZyMeSuSymyeytaJaN";   // APP KEY to access Server API
 
 
 console.log(__basedir);
